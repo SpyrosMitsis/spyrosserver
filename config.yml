@@ -1,0 +1,122 @@
+---
+# Homepage configuration
+# See https://fontawesome.com/icons for icons options
+
+title: "Spyro's dashboard"
+subtitle: "Welcome to "
+#logo: "logo.png"
+icon: "fas fa-biohazard" # Optional icon
+image: "assets/tools/deluge.png"
+header: true 
+footer: false # Optional theme customization
+
+theme: default
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#ffffff"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link-hover: "#363636"
+  dark:
+    highlight-primary: "#ecee75"
+    highlight-secondary: "#d1d369"
+    highlight-hover: "#d0d325"
+    background: "#131313"
+    card-background: "#2b2b2b"
+    text: "#eaeaea"
+    text-header: "#4f4f3d"
+    text-title: "#fafafa"
+    text-subtitle: "#f5f5f5"
+    card-shadow: rgba(0, 0, 0, 1)
+    link-hover: "#ffdd57"
+
+# Optional message
+#message:
+  #url: https://b4bz.io
+  #style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
+  #title: "Demo !"
+  #icon: "fa fa-grin"
+  #content: "This is a dummy homepage demo. <br /> Find more information on <a href='https://github.com/bastienwirtz/homer'>github.com/bastienwirtz/homer</a>"
+
+# Optional navbar
+# links: [] # Allows for navbar (dark mode, layout, and search) without any links
+links:
+  - name: "Contribute"
+    icon: "fab fa-github"
+    url: "https://github.com/bastienwirtz/homer"
+    target: "_blank" # optional html a tag target attribute
+  - name: "Wiki"
+    icon: "fas fa-book"
+    url: "https://www.wikipedia.org/"
+  # this will link to a second homer page that will load config from additionnal-page.yml and keep default config values as in config.yml file
+  # see url field and assets/additionnal-page.yml.dist used in this example:
+  #- name: "another page!"
+  #icon: "fas fa-file-alt"
+  #url: "#additionnal-page" 
+
+# Services
+# First level array represent a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
+services:
+  - name: "Network"
+    icon: "fas fa-cloud"
+    items:
+      - name: "Cockpit"
+        logo: "assets/tools/ubuntu.png"
+        subtitle: "Manage ubuntu"
+        tag: "app"
+        url: "http://spyrosserver:9090"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Portainer"
+        logo: "assets/tools/portainer.png"
+        subtitle: "Docker manager"
+        tag: "app"
+        url: "http://spyrosserver:9000"
+      - name: "Deluge"
+        logo: "assets/tools/deluge.png"
+        subtitle: "Torrent client"
+        tag: "app"
+        url: "http://spyrosserver:8112"
+      - name: "Router"
+        icon: "fas fa-wifi"
+        subtitle: "Home router"
+        tag: "app"
+        url: "http://192.168.2.1"
+
+  - name: "Home"
+    icon: "fas fa-home"
+    items:
+      - name: "Home Assistant"
+        logo: "assets/tools/HomeAssistant.png"
+        subtitle: "Home Automation"
+        tag: "app"
+        url: "http://spyrosserver:8123"
+        target: "_blank" # optional html a tag target attribute
+
+  - name: "Media"
+    icon: "fas fa-photo-video"
+    items:
+      - name: "Jellyfin"
+        logo: "assets/tools/jellyfin.png"
+        subtitle: "Media player"
+        tag: "app"
+        url: "http://spyrosserver:8096"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Sonarr"
+        logo: "assets/tools/sonarr-arch-linux.png"
+        subtitle: "Movies and Tv series"
+        tag: "app"
+        url: "http://spyrosserver:8989"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Jackett"
+        logo: "assets/tools/jacket_medium.png"
+        subtitle: "Torrent indexer"
+        tag: "app"
+        url: "http://spyrosserver:9117"
